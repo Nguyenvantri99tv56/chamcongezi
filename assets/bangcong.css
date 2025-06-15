@@ -1,0 +1,94 @@
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.filter-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.filter-inline label {
+  font-weight: bold;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.filter-inline select,
+.filter-inline button {
+  height: 32px;
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-inline button:hover {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+table#timekeepingTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+table#timekeepingTable th,
+table#timekeepingTable td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+table#timekeepingTable th {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+table#timekeepingTable tbody tr:nth-child(even) {
+  background-color: #f3f6ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-inline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .filter-inline select,
+  .filter-inline button {
+    width: 100%;
+  }
+
+  table#timekeepingTable {
+    min-width: 700px;
+    font-size: 13px;
+  }
+
+  table#timekeepingTable th,
+  table#timekeepingTable td {
+    padding: 8px 10px;
+  }
+}

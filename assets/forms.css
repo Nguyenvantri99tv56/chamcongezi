@@ -1,0 +1,226 @@
+/* forms.css - style chung cho form và bảng, tối ưu responsive */
+
+/* Reset box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Body chung cho 3 trang */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 28px;
+  color: #2563eb;
+  margin: 0;
+}
+
+/* Form container */
+.login-container, .form-container {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="time"],
+select {
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+/* Button */
+button {
+  margin-top: 25px;
+  padding: 12px 16px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Nhóm input nghỉ giữa ca */
+.break-time-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.break-time-group input {
+  flex: 1;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px #888;
+  z-index: 9999;
+  text-align: center;
+}
+
+/* Loading */
+.loading {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Bảng trong duyệt công */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+  max-width: 700px;
+  width: 100%;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 700px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+th {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f3f6ff;
+}
+
+/* Nút duyệt / từ chối */
+button.approve, button.reject {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 70px;
+  transition: background-color 0.3s ease;
+  margin: 0 4px;
+}
+
+button.approve {
+  background-color: #22c55e;
+  color: white;
+}
+
+button.reject {
+  background-color: #ef4444;
+  color: white;
+}
+
+button.approve:hover {
+  background-color: #16a34a;
+}
+
+button.reject:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 15px 10px;
+  }
+  .login-container, .form-container {
+    padding: 20px 15px;
+  }
+  label {
+    font-size: 14px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="time"],
+  select {
+    font-size: 14px;
+  }
+  button {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .break-time-group {
+    flex-direction: column;
+  }
+  .break-time-group input {
+    width: 100%;
+  }
+  table {
+    min-width: 600px;
+  }
+  th, td {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+  button.approve, button.reject {
+    padding: 6px 10px;
+    font-size: 13px;
+    min-width: 60px;
+    margin: 2px;
+  }
+}
